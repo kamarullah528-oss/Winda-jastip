@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winda Shopping Haul - Jasa Titip Terpercaya Seram Selatan</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-blue: #1e5f9e;
+            --primary-dark: #154a7a;
+            --light-blue-bg: #eef7ff;
+            --card-bg: #ffffff;
+            --text-dark: #1f2937;
+            --text-light: #6b7280;
+            --white: #ffffff;
+            --wa-green: #25D366;
+            --wa-dark: #128C7E;
+            --gold: #f59e0b;
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+            --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 20px 40px rgba(30, 95, 158, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--light-blue-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 650px;
+            margin: 40px auto;
+            background-color: var(--card-bg);
+            border-radius: 28px;
+            box-shadow: var(--shadow-lg);
+            padding: 45px 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Dekorasi Atas */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--wa-green));
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.4rem;
+            color: var(--primary-blue);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            font-size: 1rem;
+            color: var(--primary-dark);
+            font-weight: 600;
+            background-color: var(--light-blue-bg);
+            display: inline-block;
+            padding: 8px 24px;
+            border-radius: 50px;
+            border: 1px solid rgba(30, 95, 158, 0.1);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            background-color: var(--light-blue-bg);
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid rgba(30, 95, 158, 0.15);
+        }
+
+        .badge i {
+            color: var(--wa-green);
+            font-size: 0.9rem;
+        }
+
+        .badge.gold i {
+            color: var(--gold);
+        }
+
+        /* Area Info */
+        .area-info {
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: var(--light-blue-bg);
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px dashed var(--primary-blue);
+        }
+
+        /* Card Umum */
+        .card {
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid #f3f4f6;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .card h2 {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--primary-blue);
+            margin-bottom: 25px;
+            font-weight: 800;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .card h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background-color: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        /* Layanan Grid */
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 600;
+            color: var(--text-dark);
+            background-color: #f8fafc;
+            padding: 16px;
+            border-radius: 14px;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .service-item:hover {
+            transform: translateY(-3px);
+            border-color: var(--primary-blue);
+            background-color: var(--light-blue-bg);
+        }
+
+        .service-item i {
+            color: var(--primary-blue);
+            font-size: 1.4rem;
+            width: 28px;
+            text-align: center;
+        }
+
+        /* Metode Pengiriman */
+        .shipping-methods {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+        }
+
+        .shipping-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--white);
+            padding: 12px 25px;
+            border-radius: 50px;
+            border: 1px solid #e2e8f0;
+            box-shadow: var(--shadow-sm);
+            flex: 1;
+            justify-content: center;
+            min-width: 150px;
+        }
+
+        .shipping-item i {
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+        }
+
+        /* Cara Order */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 15px;
+            background-color: #f8fafc;
+            border-radius: 14px;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .step-number {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 10px rgba(30, 95, 158, 0.3);
+        }
+
+        .step-text {
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-top: 6px;
+        }
+
+        .step-text strong {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        /* Testimoni */
+        .testimonial-item {
+            background-color: #f8fafc;
+            padding: 20px;
+            border-radius: 14px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            position: relative;
+        }
+
+        .testimonial-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .stars {
+            color: var(--gold);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            font-style: italic;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .testimonial-author i {
+            color: var(--primary-blue);
+        }
+
+        /* Kontak & Alamat */
+        .contact-section {
+            text-align: center;
+            background-color: var(--white);
+            border-radius: 20px;
+            padding: 35px 25px;
+            border: 2px solid var(--light-blue-bg);
+            box-shadow: var(--shadow-md);
+            margin-bottom: 25px;
+        }
+
+        .wa-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .wa-label i {
+            color: var(--wa-green);
+            font-size: 1.5rem;
+        }
+
+        .phone-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+            letter-spacing: 1px;
+        }
+
+        .phone-number:hover {
+            color: var(--wa-green);
+        }
+
+        /* Tombol Hubungi Admin */
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background-color: var(--wa-green);
+            color: var(--white);
+            text-decoration: none;
+            padding: 18px 35px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            max-width: 350px;
+            margin: 0 auto 20px auto;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-contact:hover {
+            background-color: var(--wa-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        .btn-copy {
+            background-color: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+            margin-bottom: 25px;
+        }
+
+        .btn-copy:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .address-title {
+            font-weight: 800;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            font-size: 1rem;
+            margin-top: 25px;
+        }
+
+        .address-text {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        /* Syarat & Ketentuan */
+        .terms-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .terms-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+
+        .terms-list li i {
+            color: var(--primary-blue);
+            margin-top: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: var(--primary-blue);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            margin-top: 20px;
+        }
+
+        /* Floating WA Button */
+        .floating-wa {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--wa-green);
+            color: var(--white);
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+            z-index: 1000;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .floating-wa:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+
+        /* Responsif */
+        @media (max-width: 480px) {
+            .container { margin: 15px; padding: 30px 20px; border-radius: 20px; }
+            .header h1 { font-size: 1.9rem; }
+            .phone-number { font-size: 1.9rem; }
+            .service-grid { grid-template-columns: 1fr; }
+            .shipping-methods { flex-direction: column; }
+            .shipping-item { width: 100%; }
+            .btn-contact { font-size: 1rem; padding: 15px 25px; }
+            .floating-wa { bottom: 20px; right: 20px; width: 60px; height: 60px; font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Winda Shopping Haul</h1>
+            <p>Jasa Titip Terpercaya Seram Selatan</p>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="badge"><i class="fa-solid fa-shield-halved"></i> 100% Aman</div>
+            <div class="badge"><i class="fa-solid fa-bolt"></i> Respon Cepat</div>
+            <div class="badge gold"><i class="fa-solid fa-star"></i> Terverifikasi</div>
+        </div>
+
+        <!-- Area -->
+        <div class="area-info">
+            <i class="fa-solid fa-location-dot" style="color: var(--primary-blue);"></i>
+            Melayani Area: Missa, Tehuru & Sekitarnya
+        </div>
+
+        <!-- Layanan -->
+        <div class="card">
+            <h2>Layanan Titip Beli Terlengkap</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fa-solid fa-cookie-bite"></i>
+                    <span>Makanan & Snack</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-pump-soap"></i>
+                    <span>Skincare & Kosmetik</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-shirt"></i>
+                    <span>Fashion & Baju</span>
+                </div>
+                <div class="service-item">
+                    <i class="fa-solid fa-mug-hot"></i>
+                    <span>Jajan Viral</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pengiriman -->
+        <div class="shipping-methods">
+            <div class="shipping-item">
+                <i class="fa-solid fa-ship"></i>
+                <span>Pengiriman via Kapal</span>
+            </div>
+            <div class="shipping-item">
+                <i class="fa-solid fa-plane"></i>
+                <span>Pengiriman via Pesawat</span>
+            </div>
+        </div>
+
+        <!-- Cara Order -->
+        <div class="card">
+            <h2>Alur Pemesanan Mudah</h2>
+            <div class="steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <div class="step-text">Hubungi Admin via WhatsApp untuk <strong>mengecek ketersediaan barang</strong> dan ongkos kirim.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <div class="step-text">Kirimkan <strong>link, foto, atau detail barang</strong> yang ingin dititipkan beserta jumlahnya.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <div class="step-text">Lakukan <strong>pembayaran</strong> sesuai total yang diinformasikan admin.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <div class="step-text">Barang akan <strong>dikemas dengan aman</strong> dan dikirim sesuai jadwal. Anda akan menerima resi/laporan.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Testimoni -->
+        <div class="card">
+            <h2>Kata Pelanggan Kami</h2>
+            <div class="testimonial-item">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Prosesnya cepat banget, adminnya ramah dan responsif. Barang titipan saya sampai dengan aman dan packing rapi. Recommended!"</p>
+                <div class="testimonial-author">
+                    <i class="fa-solid fa-user-circle"></i> — Ibu Sari, Missa
+                </div>
+            </div>
+            <div class="testimonial-item">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Sudah langganan titip skincare dan jajan viral. Harganya bersaing, nggak ribet, dan selalu update status barang. Terima kasih Winda!"</p>
+                <div class="testimonial-author">
+                    <i class="fa-solid fa-user-circle"></i> — Kak Rina, Tehuru
+                </div>
+            </div>
+        </div>
+
+        <!-- Syarat & Ketentuan -->
+        <div class="card">
+            <h2>Ketentuan Layanan</h2>
+            <ul class="terms-list">
+                <li><i class="fa-solid fa-circle-check"></i> Pembayaran dilakukan di awal (DP/Full) sebelum barang dibeli.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Barang yang dititipkan tidak mengandung unsur ilegal atau berbahaya.</li>
+                <li><i class="fa-solid fa-circle-check"></i> Estimasi pengiriman via kapal 3-7 hari, via pesawat 1-3 hari (tergantung jadwal).</li>
+                <li><i class="fa-solid fa-circle-check"></i> Kami tidak bertanggung jawab atas keterlambatan akibat force majeure (cuaca buruk, dll).</li>
+            </ul>
+        </div>
+
+        <!-- Kontak & Alamat -->
+        <div class="contact-section">
+            <div class="wa-label">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>Hubungi Admin Kami</span>
+            </div>
+            
+            <a href="https://wa.me/6281324025665?text=Halo%20Admin%20Winda%20Shopping%20Haul,%20saya%20ingin%20titip%20beli%20barang.%20Mohon%20info%20ketersediaannya." target="_blank" class="phone-number">
+                081324025665
+            </a>
+
+            <a href="https://wa.me/6281324025665?text=Halo%20Admin%20Winda%20Shopping%20Haul,%20saya%20ingin%20titip%20beli%20barang.%20Mohon%20info%20ketersediaannya." target="_blank" class="btn-contact">
+                <i class="fa-brands fa-whatsapp"></i>
+                Chat Admin Sekarang
+            </a>
+
+            <button class="btn-copy" onclick="copyPhoneNumber()">Salin Nomor Admin</button>
+
+            <div class="address-title">Alamat Pengirim:</div>
+            <div class="address-text">
+                Jln. Benda GG Hj Musa, Cilandak Timur, Pasar Minggu,<br>
+                Kota Administrasi Jakarta Selatan, DKI Jakarta, Indonesia<br>
+                <span style="font-weight: 700; color: var(--primary-blue);">(Jln Gang Haji Musa)</span>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            Aman &bull; Terpercaya &bull; Profesional
+        </div>
+    </div>
+
+    <!-- Tombol Floating WhatsApp -->
+    <a href="https://wa.me/6281324025665?text=Halo%20Admin%20Winda%20Shopping%20Haul,%20saya%20ingin%20titip%20beli%20barang.%20Mohon%20info%20ketersediaannya." target="_blank" class="floating-wa">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        function copyPhoneNumber() {
+            const phoneNumber = "081324025665";
+            
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                const btn = document.querySelector('.btn-copy');
+                const originalText = btn.innerText;
+                
+                btn.innerText = "Nomor Berhasil Disalin!";
+                btn.style.backgroundColor = "var(--primary-blue)";
+                btn.style.color = "var(--white)";
+                btn.style.borderColor = "var(--primary-blue)";
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = "transparent";
+                    btn.style.color = "var(--primary-blue)";
+                    btn.style.borderColor = "var(--primary-blue)";
+                }, 2500);
+            }).catch(err => {
+                console.error('Gagal menyalin teks: ', err);
+                alert("Gagal menyalin. Silakan salin manual: " + phoneNumber);
+            });
+        }
+    </script>
+</body>
+</html>
